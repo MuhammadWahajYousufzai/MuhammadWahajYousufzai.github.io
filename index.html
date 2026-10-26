@@ -1179,7 +1179,7 @@
     <div class="project">
 
       <div class="project-head">
-        <h3>CallAI — Evidence-Grounded Call Grading</h3>
+        <h3>CallAI — Autonomous Call Grading &amp; Coaching</h3>
 
         <a class="pl"
            href="https://callgraderai.sherazwaqar.tech"
@@ -1190,24 +1190,30 @@
       </div>
 
       <div class="stack">
-        Next.js · Python · FastAPI · OpenAI · MCP
+        Next.js · Python · Playwright · Gemini · Appwrite
       </div>
 
       <ul>
         <li>
-          Private audio in, FFmpeg normalization, OpenAI transcription, then a
-          typed analysis that separates agent and customer turns and preserves
-          Urdu or mixed Urdu-English wording.
+          Fully autonomous daily pipeline: deterministic Playwright discovers
+          the day's Jazz calls after office hours, downloads checksummed
+          private recordings, and a checkpointed worker resumes at the failed
+          step across restarts — with job leases, retry bursts and cooldowns.
         </li>
 
         <li>
-          Grades an 11-category scorecard where every score must cite exact
-          transcript evidence, with schema validators rejecting mismatches.
+          Gemini-native grading: diarized transcription, Roman Urdu
+          normalization for Urdu-English agent calls, and Pydantic-validated
+          scorecards whose weighted score is computed in deterministic app
+          code — verified on real days: 58 calls discovered, 19 private
+          recordings uploaded, 17 scored, zero duplicate grades.
         </li>
 
         <li>
-          Async persistence, restart recovery, transcript correction, and
-          advisory human-review flags.
+          Consolidated to one Appwrite project — scheduled Functions, Auth,
+          database, private storage and the owner dashboard on Sites — passed
+          84 backend tests plus lint/typecheck/build, and deploys from a
+          single command for production.
         </li>
       </ul>
 
