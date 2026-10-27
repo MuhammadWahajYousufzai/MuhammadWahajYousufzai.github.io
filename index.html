@@ -509,6 +509,250 @@
     color:var(--ink-faint);
   }
 
+  /* ---------- MCP server spotlight ---------- */
+
+  .mcp-spotlight{
+    background:#EAE3D1;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+
+  .mcp-spotlight .section-tag{
+    max-width:24ch;
+  }
+
+  .mcp-lede{
+    max-width:66ch;
+    margin:16px 0 0;
+    color:var(--ink-dim);
+  }
+
+  .mcp-overview{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-top:30px;
+  }
+
+  .mcp-server-card{
+    padding:26px;
+    background:var(--dark);
+    color:var(--dark-ink);
+  }
+
+  .mcp-server-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .mcp-badge{
+    border:1px solid var(--dark-line);
+    padding:4px 8px;
+    color:var(--dark-dim);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.68rem;
+  }
+
+  .mcp-server-card h3,
+  .mcp-order-flow h3{
+    margin-top:22px;
+    color:var(--dark-ink);
+    font-size:clamp(1.35rem,2.5vw,1.8rem);
+  }
+
+  .mcp-server-card p,
+  .mcp-order-flow p{
+    color:var(--dark-dim);
+    margin:10px 0 0;
+  }
+
+  .mcp-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    margin-top:24px;
+    border:1px solid var(--dark-line);
+  }
+
+  .mcp-stats > div{
+    padding:12px;
+    border-right:1px solid var(--dark-line);
+  }
+
+  .mcp-stats > div:last-child{
+    border-right:none;
+  }
+
+  .mcp-stats strong,
+  .mcp-stats span{
+    display:block;
+  }
+
+  .mcp-stats strong{
+    color:var(--lime);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:1.4rem;
+  }
+
+  .mcp-stats span{
+    color:var(--dark-dim);
+    font-size:.72rem;
+  }
+
+  .mcp-endpoint{
+    margin-top:18px;
+    color:var(--dark-faint);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:var(--fs-small);
+    overflow-wrap:anywhere;
+  }
+
+  .mcp-order-flow{
+    padding:26px;
+    background:var(--panel);
+    border:1px solid var(--line);
+  }
+
+  .mcp-order-flow h3{
+    color:var(--ink);
+    margin-top:10px;
+  }
+
+  .mcp-order-flow p{
+    color:var(--ink-dim);
+  }
+
+  .mcp-steps{
+    list-style:none;
+    margin:20px 0 0;
+    padding:0;
+  }
+
+  .mcp-steps li{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:10px;
+    padding:12px 0;
+    border-top:1px solid var(--line);
+    color:var(--ink-dim);
+  }
+
+  .mcp-steps li > span{
+    color:var(--lime-ink);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:var(--fs-small);
+  }
+
+  .mcp-steps strong{
+    display:block;
+    color:var(--ink);
+  }
+
+  .mcp-subhead{
+    margin:34px 0 0;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.25rem;
+    font-weight:600;
+  }
+
+  .mcp-tools{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:16px;
+  }
+
+  .mcp-tool{
+    padding:18px;
+    background:var(--panel);
+    border:1px solid var(--line);
+  }
+
+  .mcp-tool h3{
+    font-size:1rem;
+    margin-bottom:8px;
+  }
+
+  .mcp-tool p{
+    margin:0;
+    color:var(--ink-dim);
+    font-size:.92rem;
+  }
+
+  .mcp-tool.is-action{
+    border-top:3px solid var(--lime-ink);
+  }
+
+  .mcp-support{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:16px;
+  }
+
+  .mcp-support > div{
+    padding:18px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.62);
+  }
+
+  .mcp-support h3{
+    font-size:1rem;
+    margin-bottom:8px;
+  }
+
+  .mcp-support p{
+    margin:0;
+    color:var(--ink-dim);
+    font-size:.92rem;
+  }
+
+  .mcp-resource-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px;
+  }
+
+  .mcp-resource-list span{
+    padding:4px 8px;
+    border:1px solid var(--line);
+    background:var(--panel);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem;
+    line-height:1.5;
+    overflow-wrap:anywhere;
+  }
+
+  .mcp-guardrail{
+    margin-top:18px;
+    padding:14px 18px;
+    border-left:3px solid var(--lime-ink);
+    background:rgba(255,255,255,.62);
+    color:var(--ink-dim);
+  }
+
+  @media(max-width:720px){
+    .mcp-overview,
+    .mcp-tools,
+    .mcp-support{
+      grid-template-columns:1fr;
+    }
+  }
+
+  @media(max-width:420px){
+    .mcp-server-card,
+    .mcp-order-flow{
+      padding:20px;
+    }
+
+    .mcp-stats > div{
+      padding:10px 7px;
+    }
+  }
+
   /* ---------- Project mock cards ---------- */
 
   .mock-card{
@@ -869,6 +1113,7 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#mcp-server">MCP Server</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#contact">Contact</a>
     </div>
@@ -893,6 +1138,12 @@
     </p>
 
     <div class="links">
+      <a href="#mcp-server" aria-label="Explore my production MCP server">
+        <svg class="ico s" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10M7 17h10M7 7v10m10-10v10"/><circle cx="7" cy="7" r="2"/><circle cx="17" cy="7" r="2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+        <span>Explore MCP server</span>
+        <span class="arr" aria-hidden="true">↓</span>
+      </a>
+
 
       <a href="https://github.com/MuhammadWahajYousufzai" target="_blank" rel="noopener" aria-label="GitHub profile">
         <svg class="ico f" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
@@ -991,6 +1242,118 @@
   </div>
 </section>
 
+<section id="mcp-server" class="mcp-spotlight">
+  <div class="wrap">
+
+    <div class="eyebrow">04 / MODEL CONTEXT PROTOCOL · BUILT FOR PRODUCTION</div>
+
+    <h2 class="section-tag">
+      Give an AI agent the ability to serve customers and place real orders.
+    </h2>
+
+    <p class="mcp-lede">
+      I built a production MCP server as a reusable commerce-tool layer—not a single chatbot. Connect it to any MCP-capable interface or agent and it can find products, prepare a live quote, place the customer’s requested Cash on Delivery order after they approve the total, and track that order. The agent experience can change; the business tools do not need to be rebuilt.
+    </p>
+
+    <div class="mcp-overview">
+      <div class="mcp-server-card">
+        <div class="mcp-server-top">
+          <div class="eyebrow lime">YOUSUF RICE · REMOTE SERVER</div>
+          <span class="mcp-badge">STATELESS · STREAMABLE HTTP</span>
+        </div>
+
+        <h3>One server. Real customer orders.</h3>
+        <p>
+          Backed by the live Appwrite catalog and order system, the server gives an agent the tools to fulfill what a customer asks for—not merely describe products or hand off an order. The agent handles the conversation; MCP exposes the commerce actions.
+        </p>
+
+        <div class="mcp-stats">
+          <div><strong>06</strong><span>customer tools</span></div>
+          <div><strong>04</strong><span>policy resources</span></div>
+          <div><strong>01</strong><span>service prompt</span></div>
+        </div>
+
+        <div class="mcp-endpoint">POST /api/mcp · optional Bearer-token protection</div>
+      </div>
+
+      <div class="mcp-order-flow">
+        <div class="eyebrow">A GUARDED ORDER JOURNEY</div>
+        <h3>Quote first. Confirm only with approval.</h3>
+        <p>
+          The agent gets current product and delivery information, presents a complete quote, and waits for the customer before placing an order.
+        </p>
+        <ol class="mcp-steps">
+          <li><span>01</span><div><strong>Discover</strong>Find products, availability and tier prices.</div></li>
+          <li><span>02</span><div><strong>Quote</strong>Calculate item totals, savings and city-based delivery fees.</div></li>
+          <li><span>03</span><div><strong>Place the order</strong>Once the customer agrees to the quote, the agent submits their requested items, contact and delivery details; the server creates the COD order.</div></li>
+          <li><span>04</span><div><strong>Track</strong>Look up order status and delivery details by order ID.</div></li>
+        </ol>
+      </div>
+    </div>
+
+    <h3 class="mcp-subhead">The tools agents can call</h3>
+    <div class="mcp-tools">
+      <article class="mcp-tool">
+        <h3 class="mono">list_products</h3>
+        <p>Browse rice products and tier pricing, with optional in-stock and hotel/restaurant filters.</p>
+      </article>
+      <article class="mcp-tool">
+        <h3 class="mono">search_products</h3>
+        <p>Search products by name, with optional availability and hotel/restaurant filters.</p>
+      </article>
+      <article class="mcp-tool">
+        <h3 class="mono">get_product_details</h3>
+        <p>Retrieve a product’s full details and available price tiers by product ID.</p>
+      </article>
+      <article class="mcp-tool">
+        <h3 class="mono">quote_order</h3>
+        <p>Build a server-side quote with tier pricing and city-based delivery fees; quotes expire after 30 minutes and accept up to 20 line items (up to 1,000 kg each).</p>
+      </article>
+      <article class="mcp-tool is-action">
+        <h3 class="mono">confirm_order</h3>
+        <p>Turn the customer’s approved quote into a real COD order in the commerce system, including customer, items and delivery address; the call includes an idempotency key.</p>
+      </article>
+      <article class="mcp-tool">
+        <h3 class="mono">track_order</h3>
+        <p>Check order status, items and delivery details by order ID, with optional phone-number verification.</p>
+      </article>
+    </div>
+
+    <h3 class="mcp-subhead">Plug the same tools into the interface you choose</h3>
+    <div class="mcp-support">
+      <div>
+        <h3>MCP-compatible AI clients</h3>
+        <p>Use the remote server as an MCP connector for supported ChatGPT and Claude integrations, or connect clients such as OpenCode. Product lookup, quotes and order placement stay on this one server.</p>
+      </div>
+      <div>
+        <h3>Your own chat or voice agent</h3>
+        <p>Connect a website agent, an ElevenLabs voice experience, or an agent built with a framework that supports MCP. The earlier first-party OpenAI Agents SDK chat was retired; its agent interface can be brought back or replaced without recreating the MCP commerce tools.</p>
+      </div>
+    </div>
+
+    <div class="mcp-support">
+      <div>
+        <h3>Four MCP resources</h3>
+        <div class="mcp-resource-list">
+          <span>yousuf-rice://policies/customer-service</span>
+          <span>yousuf-rice://policies/delivery</span>
+          <span>yousuf-rice://policies/payment</span>
+          <span>yousuf-rice://company/contact-information</span>
+        </div>
+      </div>
+      <div>
+        <h3>Ready-to-use agent prompt</h3>
+        <p><span class="mono">yousuf_rice_customer_service</span> guides the agent to verify products, present the full quote and wait for explicit agreement before ordering, follow delivery/payment policies, and escalate sensitive cases.</p>
+      </div>
+    </div>
+
+    <div class="mcp-guardrail">
+      <strong>Trust built into the workflow:</strong> product and prices come from the live catalog; the server checks quote expiry and delivery city before creating an order; the customer-service prompt tells the agent to present the full quote and wait for explicit approval before placing it. The server never asks for GPS coordinates. Optional Bearer-token authentication uses timing-safe comparison when configured.
+    </div>
+
+  </div>
+</section>
+
 <section id="capabilities" class="capabilities">
   <div class="wrap">
 
@@ -1033,9 +1396,9 @@
       </div>
 
       <div class="cap-row">
-        <div class="cat">MCP / INTEGRATIONS</div>
+        <div class="cat">MCP SERVER ENGINEERING</div>
         <div class="items">
-          Official MCP SDKs · remote &amp; stdio servers · Bearer auth · idempotency · Meta Graph / WhatsApp APIs · OpenRouter · Odoo MCP
+          Production remote MCP · Streamable HTTP · Zod-validated tools · quote-before-confirm order flows · optional Bearer auth · policy resources &amp; agent prompts · Meta Graph / WhatsApp APIs · OpenRouter · Odoo MCP
         </div>
       </div>
 
@@ -1157,9 +1520,11 @@
         </li>
 
         <li>
-          A remote MCP endpoint for product discovery, live pricing, 30-minute
-          quotes, and idempotent order confirmation, secured with Bearer auth
-          and timing-safe verification.
+          A production remote MCP server that lets compatible agents handle
+          customer requests end to end: discover products, quote the basket,
+          place the customer's approved COD order directly, and track delivery—
+          without rebuilding commerce tools for each interface.
+          <a href="#mcp-server">Explore the dedicated MCP server feature.</a>
         </li>
       </ul>
 
